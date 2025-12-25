@@ -22,7 +22,7 @@ pipeline {
                     sh  """
                         echo 'Building the pipeline'
                         echo '$COURSE'
-                        sleep 10
+                        #sleep 10
                     """
               }
             }
