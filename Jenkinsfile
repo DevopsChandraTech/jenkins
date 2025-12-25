@@ -8,10 +8,10 @@ pipeline {
     stages {
         stage('build') {
             steps {
-              script {
-                sh  """
-                     echo 'Building the pipeline'
-                """
+                script {
+                    sh  """
+                        'Building the pipeline'
+                    """
               }
             }
         }
@@ -19,7 +19,7 @@ pipeline {
             steps {
                 script {
                     sh  """
-                        echo 'Testing the pipeline'
+                        'Testing the pipeline'
                     """
                 }
             }
@@ -28,7 +28,7 @@ pipeline {
             steps {
                 script {
                     sh  """
-                        echo 'Deploying the pipeline'
+                        'Deploying the pipeline'
                     """
                 }
             }
