@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        COURSE = 'Jenkins'
+        COURSE = "Jenkins"
     }
 
     options {
@@ -28,8 +28,8 @@ pipeline {
             steps {
                 script {
                     sh  """
-                        echo 'Building the pipeline'
-                        echo '$COURSE'
+                        echo "Building the pipeline"
+                        echo $COURSE
                         #sleep 10
                         echo "Hello ${params.PERSON}"
                         echo "Biography: ${params.BIOGRAPHY}"
@@ -44,7 +44,7 @@ pipeline {
             steps {
                 script {
                     sh  """
-                        echo 'Testing the pipeline'
+                        echo "Testing the pipeline"
                     """
                 }
             }
@@ -53,7 +53,7 @@ pipeline {
             steps {
                 script {
                     sh  """
-                        echo 'Deploying the pipeline'
+                        echo "Deploying the pipeline"
                     """
                 }
             }
@@ -61,16 +61,16 @@ pipeline {
     }    
     post {
         always {
-            echo 'pipeline running always '
+            echo "pipeline running always"
         }
         success {
-            echo 'if success'
+            echo "if success"
         }
         failure {
-            echo 'if failure'
+            echo "if failure"
         }
         aborted {
-            echo 'aborted'
+            echo "aborted"
         }
     }
 }
