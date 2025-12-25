@@ -28,7 +28,7 @@ pipeline {
             steps {
                 script {
                     sh  """
-                        echo "Building the pipeline"
+                        echo "Building"
                         echo $COURSE
                         #sleep 10
                         echo "Hello ${params.PERSON}"
@@ -44,7 +44,7 @@ pipeline {
             steps {
                 script {
                     sh  """
-                        echo "Testing the pipeline"
+                        echo "Testing"
                     """
                 }
             }
@@ -53,7 +53,7 @@ pipeline {
             steps {
                 script {
                     sh  """
-                        echo "Deploying the pipeline"
+                        echo "Deploying"
                     """
                 }
             }
