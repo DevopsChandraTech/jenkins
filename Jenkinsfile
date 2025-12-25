@@ -40,7 +40,6 @@ pipeline {
                 }
             }
         }
-    }
         stage('Test') {
             steps {
                 script {
@@ -66,7 +65,8 @@ pipeline {
                     """
                 }
             }
-        }  
+        } 
+    } 
     post {
         always {
             echo "pipeline running always"
