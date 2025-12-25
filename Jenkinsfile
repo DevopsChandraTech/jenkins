@@ -37,9 +37,10 @@ pipeline {
                         echo "Choice: ${params.CHOICE}"
                         echo "Password: ${params.PASSWORD}"
                     """
-              }
+                }
             }
         }
+    }
         stage('Test') {
             steps {
                 script {
@@ -57,6 +58,7 @@ pipeline {
                     submitter "alice,bob"
                     parameters {
                         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+                    }
                 }
                 script {
                     sh  """
@@ -64,8 +66,7 @@ pipeline {
                     """
                 }
             }
-        }
-    }    
+        }  
     post {
         always {
             echo "pipeline running always"
