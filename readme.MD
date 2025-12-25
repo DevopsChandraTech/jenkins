@@ -19,8 +19,8 @@ conditions:
 pipeline 2 types:
 1. declarative pipeline:
     before running the pipeline validate the total code of pipeline then execute pipeline
-    not more secure,
+    not more secure,jenkins DSL Groovy
     if error occuer not executing the pipeline
 2. scripted pipeline 
     running the pipeline without checking the code,if error occuer then stop the pipeline
-    more secure and more control
+    more secure and more control,Purely Groovy
