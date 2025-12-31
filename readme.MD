@@ -24,3 +24,16 @@ pipeline 2 types:
 2. scripted pipeline 
     running the pipeline without checking the code,if error occuer then stop the pipeline
     more secure and more control,Purely Groovy
+environment :
+    using environment variables
+options
+    disableConcurrentBuilds -> to disable multiple builds
+aborted -> abort if pipeline fails
+parameters -> manage parameter values
+triggers:
+    jenkins -> github using webhook
+    poll-scm -> jenkins fetch any changes into gihub, if changes made then trig the pipeline.
+when commit id change then we know some change happen into that code
+input -> we will give manual inputs while running the pipeline
+when -> we conditioned into when run the particuler build
+
